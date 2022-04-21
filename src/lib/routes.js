@@ -38,4 +38,7 @@ export default {
       }
     })
   },
+  afterEachRoute(to) {
+    console.debug('Page ' + to._hash + ' loaded!')
+  },
 }

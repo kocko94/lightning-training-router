@@ -26,4 +26,16 @@ export default {
     //   component: AboutPage,
     // },
   ],
+  beforeEachRoute(from, to) {
+    return new Promise(resolve => {
+      let loggedIn = true
+      if (to._hash === 'about' && !loggedIn) {
+        console.debug('User not logged in!')
+        resolve(false)
+      } else {
+        console.debug('Welcome user!')
+        resolve(true)
+      }
+    })
+  },
 }

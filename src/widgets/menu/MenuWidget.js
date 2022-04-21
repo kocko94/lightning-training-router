@@ -30,6 +30,10 @@ export default class MenuWidget extends Lightning.Component {
     }
   }
 
+  _init() {
+    this.index = 0
+  }
+
   _focus() {
     this.patch({
       x: 0,
@@ -44,5 +48,30 @@ export default class MenuWidget extends Lightning.Component {
 
   _handleRight() {
     Router.focusPage()
+  }
+
+  _handleUp() {
+    if (this.index > 0) {
+      this.index--
+    }
+  }
+
+  _handleDown() {
+    if (this.index < this.tag('MenuItems').children.length - 1) {
+      this.index++
+    }
+  }
+
+  _handleEnter() {
+    Router.focusPage()
+    Router.navigate(this.getActiveItem().menuName)
+  }
+
+  _getFocused() {
+    return this.getActiveItem()
+  }
+
+  getActiveItem() {
+    return this.tag('MenuItems').children[this.index]
   }
 }

@@ -71,4 +71,8 @@ export default class AboutPage extends Lightning.Component {
     this._printRouterHistory()
     Router.navigate('home')
   }
+
+  _handleLeft() {
+    Router.focusWidget('Menu')
+  }
 }

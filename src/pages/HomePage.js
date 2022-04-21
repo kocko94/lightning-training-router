@@ -50,4 +50,8 @@ export default class HomePage extends Lightning.Component {
     // Router.navigate('about')
     Router.navigate('about', { someData: 'hello world' })
   }
+
+  _handleLeft() {
+    Router.focusWidget('Menu')
+  }
 }

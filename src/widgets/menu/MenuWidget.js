@@ -4,6 +4,7 @@ import MenuItem from './MenuItem'
 export default class MenuWidget extends Lightning.Component {
   static _template() {
     return {
+      x: -500,
       Background: {
         rect: true,
         w: 500,
@@ -27,5 +28,17 @@ export default class MenuWidget extends Lightning.Component {
         },
       },
     }
+  }
+
+  _focus() {
+    this.patch({
+      x: 0,
+    })
+  }
+
+  _unfocus() {
+    this.patch({
+      x: -500,
+    })
   }
 }

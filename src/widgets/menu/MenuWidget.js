@@ -5,6 +5,12 @@ export default class MenuWidget extends Lightning.Component {
   static _template() {
     return {
       x: -500,
+      transitions: {
+        x: {
+          duration: 0.5,
+          timingFunction: 'cubic-bezier(0.17, 0.9, 0.32, 1.3)',
+        },
+      },
       Background: {
         rect: true,
         w: 500,
@@ -36,13 +42,17 @@ export default class MenuWidget extends Lightning.Component {
 
   _focus() {
     this.patch({
-      x: 0,
+      smooth: {
+        x: -100,
+      },
     })
   }
 
   _unfocus() {
     this.patch({
-      x: -500,
+      smooth: {
+        x: -500,
+      },
     })
   }
 

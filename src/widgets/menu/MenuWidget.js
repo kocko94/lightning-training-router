@@ -17,15 +17,32 @@ export default class MenuWidget extends Lightning.Component {
         flex: {
           direction: 'column',
         },
-        Item1: {
-          menuName: 'Home',
-          type: MenuItem,
-        },
-        Item2: {
-          menuName: 'About',
-          type: MenuItem,
-        },
+        // Items: {
+        //   Item1: {
+        //     menuName: 'Home',
+        //     type: MenuItem,
+        //   },
+        //   Item2: {
+        //     menuName: 'Home',
+        //     type: MenuItem,
+        //   },
+        // },
       },
     }
+  }
+
+  _setup() {
+    const menuTitles = ['Home', 'About2']
+    const menuItems = menuTitles.map((item, index) => {
+      return {
+        ['Item' + index]: {
+          menuName: item,
+          type: MenuItem,
+        },
+      }
+    })
+    console.debug('Menu items...')
+    console.debug(menuItems)
+    this.tag('MenuItems').patch(menuItems)
   }
 }

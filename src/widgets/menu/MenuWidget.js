@@ -1,4 +1,4 @@
-import { Lightning } from '@lightningjs/sdk'
+import { Lightning, Router } from '@lightningjs/sdk'
 import MenuItem from './MenuItem'
 
 export default class MenuWidget extends Lightning.Component {
@@ -40,5 +40,9 @@ export default class MenuWidget extends Lightning.Component {
     this.patch({
       x: -500,
     })
+  }
+
+  _handleRight() {
+    Router.focusPage()
   }
 }

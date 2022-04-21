@@ -21,7 +21,9 @@ export default class AboutPage extends Lightning.Component {
         mount: 0.5,
         x: 960,
         y: 540,
-        src: Utils.asset('images/logo.png'),
+        w: 321,
+        h: 500,
+        src: Utils.asset('images/sponge-bob.png'),
       },
       Label: {
         mountX: 0.5,

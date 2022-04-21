@@ -21,5 +21,9 @@ export default {
       path: 'about',
       component: AboutPage,
     },
+    {
+      path: 'about/:someData',
+      component: AboutPage,
+    },
   ],
 }

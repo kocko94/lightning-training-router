@@ -52,6 +52,10 @@ export default class AboutPage extends Lightning.Component {
     }
   }
 
+  set params(someData) {
+    console.debug(someData)
+  }
+
   _printRouterHistory() {
     console.debug('Router history coming')
     console.debug(Router.getHistory())

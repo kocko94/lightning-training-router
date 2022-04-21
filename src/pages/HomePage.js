@@ -47,6 +47,7 @@ export default class HomePage extends Lightning.Component {
   }
 
   _handleEnter() {
-    Router.navigate('about')
+    // Router.navigate('about')
+    Router.navigate('about', { someData: 'hello world' })
   }
 }

@@ -52,7 +52,8 @@ export default class AboutPage extends Lightning.Component {
     }
   }
 
-  set params(someData) {
+  set params({ someData }) {
+    this.someData = someData
     console.debug(someData)
   }
 
@@ -62,6 +63,7 @@ export default class AboutPage extends Lightning.Component {
   }
 
   _handleUp() {
+    console.debug(this.someData)
     this._printRouterHistory()
   }
 

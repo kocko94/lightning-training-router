@@ -34,6 +34,21 @@ export default class AboutPage extends Lightning.Component {
           text: 'Press enter to go back to the home page...',
         },
       },
+      NavIndicator: {
+        x: 100,
+        y: 540,
+        flex: {},
+        mount: 0.5,
+        Arrow: {
+          rotation: Math.PI * -0.5,
+          src: Utils.asset('images/arrow.png'),
+        },
+        Label: {
+          text: {
+            text: 'Home',
+          },
+        },
+      },
     }
   }
 

@@ -1,5 +1,6 @@
 import HomePage from '../pages/HomePage'
 import BootPage from '../pages/BootPage'
+import AboutPage from '../pages/AboutPage'
 
 export default {
   routes: [
@@ -10,6 +11,10 @@ export default {
     {
       path: 'home',
       component: HomePage,
+    },
+    {
+      path: 'about',
+      component: AboutPage,
     },
   ],
 }

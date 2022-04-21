@@ -1,4 +1,4 @@
-import { Lightning } from '@lightningjs/sdk'
+import { Lightning, Router } from '@lightningjs/sdk'
 
 export default class HomePage extends Lightning.Component {
   static _template() {
@@ -11,14 +11,27 @@ export default class HomePage extends Lightning.Component {
         h: 1080,
         color: 0xfffbb03b,
       },
-      Label: {
-        mount: 0.5,
-        x: 500,
-        y: 500,
+      Title: {
+        mountX: 0.5,
+        x: 960,
+        y: 0,
         text: {
-          text: 'HomePage',
+          text: 'Home page',
+        },
+      },
+      Label: {
+        mountX: 0.5,
+        mountY: 1,
+        x: 960,
+        y: 1080,
+        text: {
+          text: 'Press enter to go to the about page...',
         },
       },
     }
+  }
+
+  _handleEnter() {
+    Router.navigate('about')
   }
 }

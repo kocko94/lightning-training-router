@@ -16,10 +16,12 @@ export default {
     {
       path: 'home',
       component: HomePage,
+      widgets: ['Menu'],
     },
     {
       path: 'about',
       component: AboutPage,
+      widgets: ['Menu'],
     },
     // {
     //   path: 'about/:someData',

@@ -52,7 +52,17 @@ export default class AboutPage extends Lightning.Component {
     }
   }
 
+  _printRouterHistory() {
+    console.debug('Router history coming')
+    console.debug(Router.getHistory())
+  }
+
+  _handleUp() {
+    this._printRouterHistory()
+  }
+
   _handleEnter() {
+    this._printRouterHistory()
     Router.navigate('home')
   }
 }

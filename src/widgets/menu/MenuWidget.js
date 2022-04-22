@@ -30,21 +30,14 @@ export default class MenuWidget extends Lightning.Component {
 
   _setup() {
     const menuTitles = ['Home', 'About']
-    menuTitles.forEach((item, index) => {
-      this.tag('MenuItems').patch({
-        ['Item' + index]: {
-          menuName: item,
-          type: MenuItem,
-        },
-      })
-    })
-    const menuItems = menuTitles.map((item, index) => {
+    const menuItems = menuTitles.map(item => {
       return {
-        ['Item' + index]: {
-          menuName: item,
-          type: MenuItem,
-        },
+        menuName: item,
+        type: MenuItem,
       }
+    })
+    this.tag('MenuItems').patch({
+      children: menuItems,
     })
   }
 
